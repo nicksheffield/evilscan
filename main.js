@@ -248,7 +248,7 @@ evilscan.prototype.resultAddDns = function(result,r) {
 };
 
 evilscan.prototype.resultAddPort = function(result,r) {
-
+    
     if (!r || !this.options.port || !result) {
         return r;
     }
@@ -332,8 +332,8 @@ evilscan.prototype.scan = function(args,nextIteration) {
             self.portScan(args.ip,args.port,next);
         }
     ],function(err,arr) {
-        result = self.resultAddDns(arr[1],result);
-        result = self.resultAddPort(arr[2],result);
+        result = self.resultAddDns(arr[0],result);
+        result = self.resultAddPort(arr[1],result);
         result = self.resultClean(result);
         if (result) {
             self.emit('result',result);
