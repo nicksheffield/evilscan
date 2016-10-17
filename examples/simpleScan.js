@@ -9,7 +9,6 @@ var options = {
     status  : 'TROU', // Timeout, Refused, Open, Unreachable
     timeout : 3000,
     banner  : true,
-    geo	    : true
 };
 
 var scanner = new evilscan(options);
