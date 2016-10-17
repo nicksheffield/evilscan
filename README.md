@@ -3,4 +3,6 @@ evilscan
 
 See the real [repo](https://github.com/eviltik/evilscan) for docs.
 
-This version is just without any of the geoip-lite dependency, which was bloating the filesize and I wasn't using the functionality.
+I wanted to use evilscan in an [electron app](https://github.com/nicksheffield/codecast), but having the geoip-lite dependency caused the app to be 100mb bigger than necessary.
+
+This is just a version of evilscan with the geoip-lite dependency removed.
